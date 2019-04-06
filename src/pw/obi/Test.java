@@ -13,10 +13,10 @@ public class Test {
 	for (int i = 0; i < 190; i++ )
 	{
 		Passenger passenger = new Passenger(generateRndomName(), generateRndomID());	
-		System.out.println(flight.reserveTicket(passenger));
+		SystemReservation.out.println(flight.reserveTicket(passenger));
 	}
 	
-	System.out.println("Zarezerwowano łącznie " + flight.getNumberOfReservedTickets() + " biletów za kwotę: " + flight.getPriceForTicket()
+	SystemReservation.out.println("Zarezerwowano łącznie " + flight.getNumberOfReservedTickets() + " biletów za kwotę: " + flight.getPriceForTicket()
 	+ "$ na tym locie linie lotnicze zarobią " + (double)(flight.getNumberOfReservedTickets()*flight.getPriceForTicket()) + " $");
 
 	}

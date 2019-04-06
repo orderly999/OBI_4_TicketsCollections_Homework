@@ -2,14 +2,14 @@ package pw.obi;
 
 import java.util.HashMap;
 
-public class System {
+public class SystemReservation {
 
 	private HashMap<String, Flight> flightByDepartureFromCollection;
 	private HashMap<String, Flight> flightByDepartureFlightToCollection;
 	private HashMap<String, Passenger> passengersByIDCollection;
 	private HashMap<String, Passenger> passengersByNameCollection;
 	
-	public System()
+	public SystemReservation()
 	{
 		flightByDepartureFromCollection = new HashMap<String, Flight>();
 		flightByDepartureFlightToCollection = new HashMap<String, Flight>();

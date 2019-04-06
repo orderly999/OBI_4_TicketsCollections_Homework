@@ -1,9 +1,12 @@
 package pw.obi;
 
+import java.util.ArrayList;
+
 public class Passenger {
 
 	private String name;
 	private String id;
+	ArrayList<Ticket> ticketList;
 	
 	public Passenger(String name, String id) throws EmptyNameException, EmptyIdException
 	{
@@ -29,4 +32,10 @@ public class Passenger {
 	{
 		return id;			
 	}
+	
+    public void addTicket(Ticket ticket)
+	{
+    	ticketList.add(ticket);
+    }
+	
 }

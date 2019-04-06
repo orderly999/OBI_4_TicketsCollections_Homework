@@ -22,7 +22,7 @@ public class Flight {
    String reserveTicket(Passenger passenger)
    {
 	   if (!addTicket(passenger))		   
-	       return "Nie udało się zarezerwować biletu. Brak miejsc na pokładzie";
+	       return "Nie udało się zarezerwować biletu. Brak miejsc na pokładzie.";
 	   else
 	   {
 		   this.reservedTickets++;    

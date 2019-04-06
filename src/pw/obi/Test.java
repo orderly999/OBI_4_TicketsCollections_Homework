@@ -6,9 +6,9 @@ import java.util.Random;
 public class Test {
 
 	public static void main(String[] args) throws EmptyNameException, EmptyIdException {
-
-	Flight flight = new Flight(180, "WAW", "PAR", 99.99);	
+		
 	SystemReservation sys = new SystemReservation();
+	Flight flight = new Flight(180, "WAW", "PAR", 99.99);	
 	
 	Passenger passenger1 = null;
 	Passenger passenger2 = null;
@@ -48,8 +48,6 @@ public class Test {
 	System.out.println("Nazwisko wyszukanego pasażera to: " + sys.findPassengerByID("87121289234").getName());
 	}
 	}
-	
-	
 	
 	
 	public static String generateRndomName() {

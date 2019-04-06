@@ -23,8 +23,10 @@ public class Test {
 		
 	} catch (EmptyNameException e) {
 		e.printStackTrace();
+		System.out.println("Wystapil wyjatek od pustego nazwiska");
 	} catch (EmptyIdException e) {
 		e.printStackTrace();
+		System.out.println("Wystapil wyjatek od pustego id");
 	}
 	
 	finally {

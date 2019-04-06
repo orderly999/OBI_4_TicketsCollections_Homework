@@ -5,13 +5,33 @@ import java.util.Random;
 
 public class Test {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws EmptyNameException, EmptyIdException {
 
 	Flight flight = new Flight(180, "WAW", "PAR", 99.99);	
 	SystemReservation sys = new SystemReservation();
 	
-	Passenger passenger1 = new Passenger("Kowalski Jan", "87121289234");
-	sys.addPassenger(passenger1);
+	Passenger passenger1 = null;
+	Passenger passenger2 = null;
+	Passenger passenger3 = null;
+	
+	try {
+	passenger1 = new Passenger("Kowalski Jan", "87121289234");
+	passenger2 = new Passenger("", "87121289237");
+	passenger3 = new Passenger("Jan Nowak", "");
+	
+	
+		
+	} catch (EmptyNameException e) {
+		e.printStackTrace();
+	} catch (EmptyIdException e) {
+		e.printStackTrace();
+	}
+	
+	finally {
+	
+	sys.addPassenger(passenger1);	
+	//sys.addPassenger(passenger2);
+	//sys.addPassenger(passenger3);
 	
 	for (int i = 0; i < 190; i++ )
 	{
@@ -24,8 +44,11 @@ public class Test {
 	+ "$ na tym locie linie lotnicze zarobią " + (double)(flight.getNumberOfReservedTickets()*flight.getPriceForTicket()) + " $");
 	
 	System.out.println("Nazwisko wyszukanego pasażera to: " + sys.findPassengerByID("87121289234").getName());
-
 	}
+	}
+	
+	
+	
 	
 	public static String generateRndomName() {
 	       String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
